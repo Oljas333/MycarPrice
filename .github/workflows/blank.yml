@@ -1,0 +1,18 @@
+---
+name: Newman Run
+on:
+  workflow_dispatch: null
+jobs:
+  name: Run tests
+  runs-on: windows-latest
+  steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: "18"
+    - name: Install newman
+      run: npm install -g newman
+    - name: Install newman reporter
+      run: npm install -g newman-reporter-htmlextra
+    - name: Run tests
+      run: newman run MycarСalсulate.postman_collection.json -d Calculate.json--reporters cli,html --insecure
