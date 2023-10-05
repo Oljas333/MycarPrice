@@ -16,4 +16,4 @@ jobs:
       - name: Install newman reporter
         run: npm install -g newman-reporter-htmlextra
       - name: Run tests
-        run: newman run MycarСalсulate.postman_collection.json -d Calculate.json --reporters cli,html --insecure
+        run: newman run MycarPrice.postman_collection.json -d Price.json --reporters cli,html --insecure
