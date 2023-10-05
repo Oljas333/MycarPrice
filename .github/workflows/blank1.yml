@@ -1,4 +1,4 @@
-name: Newman Run
+name: Newman Run2
 
 on:
   workflow_dispatch: null
