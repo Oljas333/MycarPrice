@@ -1,0 +1,15 @@
+name: Newman Run
+
+on:
+  workflow_dispatch: null
+
+jobs:
+  newman:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: matt-ball/newman-action@master
+        with:
+          collection: MycarPrise.postman_collection.json
+          environment: Test 2.postman_environment.json
+          iterationData: Price.json
