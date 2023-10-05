@@ -11,5 +11,4 @@ jobs:
       - uses: matt-ball/newman-action@master
         with:
           collection: MycarPrise.postman_collection.json
-          environment: Test 2.postman_environment.json
-          iterationData: Price.json
+          environment: Price.json
